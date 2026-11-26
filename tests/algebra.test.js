@@ -1,0 +1,1 @@
+const assert=require('node:assert/strict');const A=require('../algebra.js');for(const [a,b] of [['3x+2x-4','5x-4'],['(x+2)(x-3)','x²-x-6'],['-3x(2x-4)','-6x²+12x'],['2xy+3yx','5xy'],['-x²','-(x*x)'],['x-x','0']])assert(A.equal(a,b),a);assert(!A.equal('3x+5','8x'));assert.throws(()=>A.parse('x/2'));assert.throws(()=>A.parse('x+'));console.log('OK');
